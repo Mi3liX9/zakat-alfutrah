@@ -1,0 +1,46 @@
+---
+
+interface Props {
+    question: string;
+    answer: string;
+    number: number
+}
+const {question, answer, number} = Astro.props
+---
+
+
+<div class="card-grid">
+    <div class="col-start-2 col-end-9 row-start-1 row-end-5 my-grid dark-blue blue rounded-r-2xl py-4 gap-4">
+      <span class="text-lg col-start-2 col-end-3">
+        {question}
+      </span>      
+      <span class="text-lg row-start-3 col-start-2 col-end-3">
+        {answer}
+      </span>
+
+    </div>
+    <div class="col-start-1 col-end-3 row-end-2 flex flex-col justify-evenly aspect-square bg-white rounded-2xl shadow-md m-5">
+      <span class="text-center text-2xl font-bold">{number}</span>
+    </div>
+  </div>
+
+
+<style>
+    .my-grid {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 3fr 0.5fr;
+    }
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+    .blue {
+        color: #73b1be;
+    }
+
+    .dark-blue{ 
+        background-color: #0f3c59;
+    }
+    
+</style>
