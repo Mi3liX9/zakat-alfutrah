@@ -1,13 +1,10 @@
 ---
-import { Calculator } from '../components/calculator';
-import Layout from '../layouts/Layout.astro';
+import { Calculator } from "../components/calculator";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	
-	<div class="p-4">
-
-		<Calculator client:load />
-	</div>
+  <div class="pr-4 pt-4">
+    <Calculator client:load />
+  </div>
 </Layout>
-
