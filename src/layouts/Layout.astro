@@ -21,13 +21,14 @@ const { title } = Astro.props;
   </head>
   <body class="wallpaper">
     <header>
-      <img src="/header.jpg" class="mb-4 h-96 w-full object-cover object-top rounded-b-3xl shadow-lg" />
+      <img src="/header.png" class="mb-4 w-full object-cover object-top" />
       <nav class="flex justify-around p-4">
         <MyLink href="calc">زكاة الفطرة</MyLink>
         <MyLink href="info">مسائل</MyLink>
       </nav>
     </header>
     <slot />
+    <img src="/logo_down.png" class="absolute bottom-0" />
   </body>
 </html>
 
@@ -42,9 +43,13 @@ const { title } = Astro.props;
   }
 
   .wallpaper {
-    background: url("/wallpaper.jpg");
+    background: url("/wallpaper.png");
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
+  }
+
+  .my-yellow {
+    color: #d8b166
   }
 </style>
